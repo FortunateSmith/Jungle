@@ -5,4 +5,11 @@
   <td>
     <h5><%= category.name %></h5>  
   </td>
+  <td>
+  <% @products.each do |product| %>
+    <% if product.category_id == category.id %>
+    <%= product.name %> *
+    <% end %>
+  <% end %>  
+  </td>
 </tr>

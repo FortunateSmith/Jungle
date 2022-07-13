@@ -4,9 +4,13 @@
     <h1>Admin &raquo; All Products</h1>
   </header>
 
-  <div class="well">
+  <span class="well">
     <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
-  </div>
+  </span>
+
+  <span class="well">
+    <%= link_to 'All Categories', [:admin, :categories], class: 'btn btn-info' %>
+  </span>
 
   <div class="panel panel-default products">
 
