@@ -18,12 +18,13 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :new, :create]
   end
   
-  get 'sessions/login'
-  post 'sessions/login'
-  get 'sessions/logout'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   
-  get 'users/new'
-  post 'users/users'
+  get '/signup', to: 'users#new'
+  # get 'users/new'
+  post '/users', to: 'users#create'
   
     get 'about/index'
   # The priority is based upon order of creation: first created -> highest priority.
